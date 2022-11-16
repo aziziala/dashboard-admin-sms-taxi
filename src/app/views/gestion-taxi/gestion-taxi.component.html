@@ -1,0 +1,86 @@
+<!--<div>-->
+<!--  <div class="submit-form">-->
+<!--    <div *ngIf="!submitted">-->
+<!--      <div class="form-group">-->
+<!--        <label for="title">Title</label>-->
+<!--        <input-->
+<!--          type="text"-->
+<!--          class="form-control"-->
+<!--          id="title"-->
+<!--          required-->
+<!--          [(ngModel)]="tutorial.title"-->
+<!--          name="title"-->
+<!--        />-->
+<!--      </div>-->
+
+<!--      <div class="form-group">-->
+<!--        <label for="description">Description</label>-->
+<!--        <input-->
+<!--          class="form-control"-->
+<!--          id="description"-->
+<!--          required-->
+<!--          [(ngModel)]="tutorial.description"-->
+<!--          name="description"-->
+<!--        />-->
+<!--      </div>-->
+
+<!--      <button (click)="saveTutorial()" class="btn btn-success">Submit</button>-->
+<!--    </div>-->
+
+<!--    <div *ngIf="submitted">-->
+<!--      <h4>Tutorial was submitted successfully!</h4>-->
+<!--      <button class="btn btn-success" (click)="newTutorial()">Add</button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <strong>Ajouter taxi</strong>
+      </div>
+      <div class="card-body">
+        <div *ngIf="!submitted">
+        <form action="" method="post" class="form-horizontal">
+          <div class="form-group row">
+
+            <label class="col-md-3 col-form-label" for="hf-email">Nom</label>
+            <div class="col-md-9">
+              <input type="text" id="hf-email" name="hf-email" class="form-control" placeholder="Entrer nom.." autocomplete="email" [(ngModel)]="tutorial.nom">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="hf-password">numéro cin</label>
+            <div class="col-md-9">
+              <input type="text" id="hf-cin" name="hf-password" class="form-control" placeholder="numéro cin.." autocomplete="current-password" [(ngModel)]="tutorial.numero_cin">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="hf-password">numéro taxi</label>
+            <div class="col-md-9">
+              <input type="text" id="hf-password" name="hf-password" class="form-control" placeholder="numéro taxi.." autocomplete="current-password" [(ngModel)]="tutorial.numero_taxi">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="hf-password">constructeur</label>
+            <div class="col-md-9">
+              <input type="text" id="hf-constructeur" name="hf-password" class="form-control" placeholder="constructeur.." autocomplete="current-password" [(ngModel)]="tutorial.constructeur">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="hf-password">numéro matricule</label>
+            <div class="col-md-9">
+              <input type="text" id="hf-mat" name="hf-password" class="form-control" placeholder="numéro matricule .." autocomplete="current-password" [(ngModel)]="tutorial.numero_matricule">
+            </div>
+          </div>
+          <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+      </div>
+      <div *ngIf="submitted">
+        <h4>taxi was submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newTutorial()">Add</button>
+      </div>
+  </div><!--/.col-->
+  </div>
